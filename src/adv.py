@@ -49,3 +49,21 @@ room['treasure'].s_to = room['narrow']
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+while True:
+    cmd = input("direction--> ")
+    if cmd == 'n':
+        # Do something
+        print(cmd)
+    elif cmd == 's':
+        # Do something
+        print(cmd)
+    elif cmd == 'e':
+        # Do something
+        print(cmd)
+    elif cmd == 'w':
+        # Do something
+        print(cmd)
+    elif cmd == 'q':
+        print("Goodbye!")
+        break
