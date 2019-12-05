@@ -10,8 +10,7 @@ class Room:
         self.e_to = e_to
         self.w_to = w_to
         self.items = items
-    
-# north = Room(name='North Room', description='The room to the North')
-# south = Room(name='South Room', description='The room to the South')
-# east = Room(name='East Room', description='The room to the East')
-# west = Room(name='West Room', description='The room to the West')
+    def removeItem(self, item):
+        self.items.remove(item)
+    def addItem(self, item):
+        self.items.append(item)

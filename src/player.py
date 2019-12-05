@@ -11,3 +11,6 @@ class Player:
     def getItem(self, item):
         self.items.append(item)
         print(f"You got the {item}!")
+    def dropItem(self, item):
+        self.items.remove(item)
+        print(f"You dropped the {item}.")

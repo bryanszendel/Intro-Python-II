@@ -91,7 +91,7 @@ The `/src` directory contains the files `adv.py`, which is where the main logic 
 * [X] Implement support for the verb `get` followed by an `Item` name. This will be
   used to pick up `Item`s.
 
-  * If the user enters `get` or `take` followed by an `Item` name, look at the
+  * [X] If the user enters `get` or `take` followed by an `Item` name, look at the
     contents of the current `Room` to see if the item is there.
 
      * If it is there, remove it from the `Room` contents, and add it to the
