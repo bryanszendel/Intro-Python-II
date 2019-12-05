@@ -47,12 +47,12 @@ while True:
     print("")
     cmd = input(">>> ")
     print("")
-    
+
     available_items = player1.current_room.items # shorten access to available items
 
     if len(cmd) > 1:
         action_cmd = cmd.split(' ')
-    if action_cmd[0] == 'get':
+    if action_cmd[0] == 'get' or action_cmd[0] == 'take':
         if action_cmd[1] in available_items:
             player1.getItem(action_cmd[1])
         else:
