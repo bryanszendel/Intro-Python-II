@@ -43,8 +43,21 @@ while True:
     print(f"There are {len(player1.current_room.items)} items here:")
     for x in player1.current_room.items:
         print(f"- {x}")
+
     print("")
     cmd = input(">>> ")
+    print("")
+    
+    available_items = player1.current_room.items # shorten access to available items
+
+    if len(cmd) > 1:
+        action_cmd = cmd.split(' ')
+    if action_cmd[0] == 'get':
+        if action_cmd[1] in available_items:
+            player1.getItem(action_cmd[1])
+        else:
+            print("That item isn't here...")
+            
     if cmd == 'n':
         if player1.current_room.n_to is None:
             print("Not allowed. Choose another move...")
@@ -68,3 +81,7 @@ while True:
     elif cmd == 'q':
         print("Goodbye!")
         break
+
+    
+
+    
