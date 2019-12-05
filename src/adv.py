@@ -50,6 +50,7 @@ while True:
             player1.current_room = room['foyer'].n_to
         elif player1.current_room.name == 'Narrow Passage':
             player1.current_room = room['narrow'].n_to
+            print(player1.current_room.description)
         else: 
             print("Not allowed. Choose another move...")
     elif cmd == 's':
@@ -67,9 +68,8 @@ while True:
         else:
             print("Not allowed. Choose another move...")
     elif cmd == 'w':
-        if player1.current_room.name == 'narrow':
-            player1.current_room = room['treasure'].w_to
-            print(player1.current_room.description)
+        if player1.current_room.name == 'Narrow Passage':
+            player1.current_room = room['narrow'].w_to
         else:
             print("Not allowed. Choose another move...")
     elif cmd == 'q':
