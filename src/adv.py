@@ -4,21 +4,21 @@ from player import Player
 # Declare all the rooms
 
 room = {
-    'outside':  Room("Outside Cave Entrance", "North of you, the cave mount beckons"),
+    'outside':  Room("Outside Cave Entrance", "North of you, the cave mount beckons", items=['dirt', 'map']),
 
     'foyer':    Room("Foyer", """Dim light filters in from the south. Dusty
-passages run north and east."""),
+passages run north and east.""", items=['flashlight', 'umbrella']),
 
     'overlook': Room("Grand Overlook", """A steep cliff appears before you, falling
 into the darkness. Ahead to the north, a light flickers in
-the distance, but there is no way across the chasm."""),
+the distance, but there is no way across the chasm.""", items=['binoculars', 'sword', 'gunpowder']),
 
     'narrow':   Room("Narrow Passage", """The narrow passage bends here from west
-to north. The smell of gold permeates the air."""),
+to north. The smell of gold permeates the air.""", items=['spear', 'medicine']),
 
     'treasure': Room("Treasure Chamber", """You've found the long-lost treasure
 chamber! Sadly, it has already been completely emptied by
-earlier adventurers. The only exit is to the south."""),
+earlier adventurers. The only exit is to the south.""", items=['coin', 'torch']),
 }
 
 # Link rooms together
@@ -40,7 +40,11 @@ player1 = Player('Bryan', room['outside']) # Make a new player object that is cu
 
 while True:
     print(f"{player1.name} is currently at the {player1.current_room.name}")
-    cmd = input("--> ")
+    print(f"There are {len(player1.current_room.items)} items here:")
+    for x in player1.current_room.items:
+        print(f"- {x}")
+    print("")
+    cmd = input(">>> ")
     if cmd == 'n':
         if player1.current_room.n_to is None:
             print("Not allowed. Choose another move...")
