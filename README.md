@@ -18,9 +18,9 @@ Up to this point, you've gotten your feet wet by working on a bunch of small Pyt
 
 ### Day 1 MVP
 
-* Create the REPL command parser in `adv.py` which allows the player to move to rooms
+* [X] Create the REPL command parser in `adv.py` which allows the player to move to rooms
   in the four cardinal directions.
-* Fill out Player and Room classes in `player.py` and `room.py`
+* [X] Fill out Player and Room classes in `player.py` and `room.py`
 
 ### Day 2 MVP
 
@@ -34,44 +34,44 @@ Up to this point, you've gotten your feet wet by working on a bunch of small Pyt
 The `/src` directory contains the files `adv.py`, which is where the main logic for the game should live, `room.py`, which will contain the definition of the Room class, and `player.py`, which will contain the definition of the Player class.
 
 
-* Add a REPL parser to `adv.py` that accepts directional commands to move the player
-  * After each move, the REPL should print the name and description of the player's current room
-  * Valid commands are `n`, `s`, `e` and `w` which move the player North, South, East or West
-  * The parser should print an error if the player tries to move where there is no room.
+* [X] Add a REPL parser to `adv.py` that accepts directional commands to move the player
+  * [X] After each move, the REPL should print the name and description of the player's current room
+  * [X] Valid commands are `n`, `s`, `e` and `w` which move the player North, South, East or West
+  * [X] The parser should print an error if the player tries to move where there is no room.
 
-* Put the Room class in `room.py` based on what you see in `adv.py`.
+* [X] Put the Room class in `room.py` based on what you see in `adv.py`.
 
-  * The room should have `name` and `description` attributes.
+  * [X] The room should have `name` and `description` attributes.
 
-  * The room should also have `n_to`, `s_to`, `e_to`, and `w_to` attributes
+  * [X] The room should also have `n_to`, `s_to`, `e_to`, and `w_to` attributes
     which point to the room in that respective direction.
 
-* Put the Player class in `player.py`.
-  * Players should have a `name` and `current_room` attributes
+* [X] Put the Player class in `player.py`.
+  * [X] Players should have a `name` and `current_room` attributes
 
 
-* Create a file called `item.py` and add an `Item` class in there.
+* [X] Create a file called `item.py` and add an `Item` class in there.
 
-  * The item should have `name` and `description` attributes.
+  * [X] The item should have `name` and `description` attributes.
 
      * Hint: the name should be one word for ease in parsing later.
 
-  * This will be the _base class_ for specialized item types to be declared
+  * [X] This will be the _base class_ for specialized item types to be declared
     later.
 
 * Add the ability to add items to rooms.
 
-  * The `Room` class should be extended with a `list` that holds the `Item`s
+  * [X] The `Room` class should be extended with a `list` that holds the `Item`s
     that are currently in that room.
 
-  * Add functionality to the main loop that prints out all the items that are
+  * [X] Add functionality to the main loop that prints out all the items that are
     visible to the player when they are in that room.
 
-* Add capability to add `Item`s to the player's inventory. The inventory can
+* [X] Add capability to add `Item`s to the player's inventory. The inventory can
   also be a `list` of items "in" the player, similar to how `Item`s can be in a
   `Room`.
 
-* Add a new type of sentence the parser can understand: two words.
+* [X] Add a new type of sentence the parser can understand: two words.
 
   * Until now, the parser could just understand one sentence form:
 
@@ -79,19 +79,19 @@ The `/src` directory contains the files `adv.py`, which is where the main logic 
 
     such as "n" or "q".
 
-  * But now we want to add the form:
+  * [X] But now we want to add the form:
 
     `verb` `object`
 
     such as "take coins" or "drop sword".
 
-  * Split the entered command and see if it has 1 or 2 words in it to determine
+  * [X] Split the entered command and see if it has 1 or 2 words in it to determine
     if it's the first or second form.
 
-* Implement support for the verb `get` followed by an `Item` name. This will be
+* [X] Implement support for the verb `get` followed by an `Item` name. This will be
   used to pick up `Item`s.
 
-  * If the user enters `get` or `take` followed by an `Item` name, look at the
+  * [X] If the user enters `get` or `take` followed by an `Item` name, look at the
     contents of the current `Room` to see if the item is there.
 
      * If it is there, remove it from the `Room` contents, and add it to the
