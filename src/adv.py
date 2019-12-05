@@ -40,6 +40,17 @@ room['narrow'].w_to = room['foyer']
 # Make a new player object that is currently in the 'outside' room.
 player1 = Player('Bryan', room['outside'])
 
+# Write a loop that:
+#
+# * Prints the current room name
+# * Prints the current description (the textwrap module might be useful here).
+# * Waits for user input and decides what to do.
+#
+# If the user enters a cardinal direction, attempt to move to the room there.
+# Print an error message if the movement isn't allowed.
+#
+# If the user enters "q", quit the game.
+
 while True:
     print(f"{player1.name} is currently at the {player1.current_room.name}")
     cmd = input("direction--> ")
@@ -75,15 +86,3 @@ while True:
     elif cmd == 'q':
         print("Goodbye!")
         break
-
-
-# Write a loop that:
-#
-# * Prints the current room name
-# * Prints the current description (the textwrap module might be useful here).
-# * Waits for user input and decides what to do.
-#
-# If the user enters a cardinal direction, attempt to move to the room there.
-# Print an error message if the movement isn't allowed.
-#
-# If the user enters "q", quit the game.
